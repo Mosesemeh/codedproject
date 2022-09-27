@@ -4,6 +4,18 @@ var database = [
         password: "topset",
         age: "34",
         hobby: "drinking",
+    },
+    {
+        username: "tonto",
+        password: "1234",
+        age: "21",
+        hobby: "drinking",
+    },
+    {
+        username: "Ada",
+        password: "3322",
+        age: "55",
+        hobby: "drinking",
     }
 ];
 
@@ -20,19 +32,42 @@ var newsFeed = [
 
 var userNamePrompt = prompt("what is your name");
 var passwordPrompt = prompt("what is your password");
-var agePrompt = prompt("how old are you");
-var hobbyPrompt = prompt("what is your hobby");
 
-function signIn(user, pass, ages, hobbies) {
-    if(user === database[0].username && 
-        pass === database[0].password && 
-        ages === database[0].age && 
-        hobbies === database[0].hobby) 
-        {
-            console.log(newsFeed);
-        } else {
-            alert("i dont know you");
-        }
-}
 
-signIn(userNamePrompt, passwordPrompt, agePrompt, hobbyPrompt);
+function isUserValid(user, pass) {
+    for(var i=0; i < database.length; i++) {
+        if(database[i].username === user && 
+            database[i].password === pass) {
+                return true; 
+                }
+                }
+                return false;
+            }
+
+
+function signIn(user, pass) {
+    console.log(isUserValid(user, pass));
+    
+//    for(var i=0; i < database.length; i++) {
+  //      if(database[i].username === user && 
+    //        database[i].password === pass) {
+      //          console.log(newsFeed); 
+        //        } else {
+          //          alert("sorry, wrong password")
+            //    }
+           // }
+    }
+
+    
+    
+    
+    //if(user === database[0].username && 
+      //  pass === database[0].password) 
+       // {
+        //    console.log(newsFeed);
+        //} else {
+          //  alert("i dont know you");
+       // }
+//}
+
+signIn(userNamePrompt, passwordPrompt);
