@@ -36,8 +36,8 @@ var passwordPrompt = prompt("what is your password");
 
 function isUserValid(user, pass) {
     for(var i=0; i < database.length; i++) {
-        if(database[i].username === user && 
-            database[i].password === pass) {
+        if(user === database[i].username && 
+            pass ===  database[i].password) {
                 return true; 
                 }
                 }
@@ -46,17 +46,13 @@ function isUserValid(user, pass) {
 
 
 function signIn(user, pass) {
-    console.log(isUserValid(user, pass));
-    
-//    for(var i=0; i < database.length; i++) {
-  //      if(database[i].username === user && 
-    //        database[i].password === pass) {
-      //          console.log(newsFeed); 
-        //        } else {
-          //          alert("sorry, wrong password")
-            //    }
-           // }
+        if(isUserValid(user, pass)) {
+                console.log(newsFeed); 
+        } else {
+            alert("sorry, wrong password or username")
+        }
     }
+    
 
     
     
