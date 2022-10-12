@@ -16,18 +16,18 @@ function creatListElement() {
 function addListAfterClick() {
     if (inputLength() > 0) {
         creatListElement();
-     }
-     
+     }    
+}
+function eventWhich() {
+    return event.which;
 }
 
-function addListAfterKeypress(event) {
-    if (inputLength() > 0 && event.which === 13) {
+function addListAfterKeypress() {
+    if (inputLength() > 0 && eventWhich() === 13) {
         creatListElement();
     }
 }
 
  botton.addEventListener("click", addListAfterClick);
 
-
  input.addEventListener("keypress", addListAfterKeypress);
- 
