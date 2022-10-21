@@ -21,3 +21,4 @@ function moveCommand(direction) {
 }
 
 const add = (a, b) => a + b;
+

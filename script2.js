@@ -13,6 +13,7 @@ function creatListElement() {
     input.value = "";
 }
 
+
 function addListAfterClick() {
     if (inputLength() > 0) {
         creatListElement();
