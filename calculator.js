@@ -7,3 +7,19 @@ function multiply(a, b) {
 };
 
 multiply(3, 4);
+
+const square = (x) => x**2;
+
+const cube = (y) => y**3;
+
+const multiply = (a, b) => a*b;
+
+
+// Call Stack 
+function foo() {
+    foo()
+}
+
+foo();
+
+setTimeout(() => {console.log(2)},2000)
